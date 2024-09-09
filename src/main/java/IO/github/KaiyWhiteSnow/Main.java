@@ -25,6 +25,16 @@ public class Main {
                     Mazlicek.prumernaVaha(listMazlicku);
                     Mazlicek.prumernyVek(listMazlicku);
                     break;
+                case 5:
+                    System.out.println("Jak se jmenuje tvůj mazlíček? ");
+                    String jmeno = sc.nextLine();
+                    System.out.println(Mazlicek.hledaniMazlickaDleJmena(listMazlicku, jmeno));
+                    break;
+                case 6:
+                    System.out.println("Jaký druh hledáš? ");
+                    String druh = sc.nextLine();
+                    System.out.println(Mazlicek.hledaniMazlickaDleDruhu(listMazlicku, druh));
+                    break;
                 default:
                     throw new RuntimeException();
             }
@@ -67,5 +77,4 @@ public class Main {
             }
         }
     }
-
 }

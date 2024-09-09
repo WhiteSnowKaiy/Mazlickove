@@ -53,6 +53,26 @@ public class Mazlicek {
         }
         return celkovaVaha / listMazlicku.size();
     }
+
+    public static String hledaniMazlickaDleJmena(ArrayList<Mazlicek> listMazlicku, String jmeno) {
+        for (Mazlicek mazlicek : listMazlicku) {
+            if (mazlicek.getJmeno().equals(jmeno)) {
+                return mazlicek.toString();
+            }
+        }
+        return "Nebyl nalezen mazlíček se jménem: " + jmeno;
+    }
+
+    public static ArrayList<Mazlicek> hledaniMazlickaDleDruhu(ArrayList<Mazlicek> listMazlicku, String druh) {
+        ArrayList<Mazlicek> mazlickove = new ArrayList<>();
+        for (Mazlicek mazlicek : listMazlicku){
+            if (mazlicek.getDruh().equals(druh)) {
+                mazlickove.add(mazlicek);
+            }
+        }
+        return mazlickove;
+    }
+
     public Mazlicek(String jmeno, String druh, int vek, float vaha) {
         this.jmeno = jmeno;
         this.druh = druh;
