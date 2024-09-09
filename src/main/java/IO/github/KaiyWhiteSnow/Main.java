@@ -8,7 +8,14 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while (true){
-            System.out.println("Chcete přídat mazlíčka (1), vypsat informace o mazlíčkovy (2), vypsat jména mazlíčků (3), vypsat průměrný věk a váhu (4)?");
+            System.out.println("""
+                Chcete přídat mazlíčka (1), 
+                vypsat informace o mazlíčkovy (2), 
+                vypsat jména mazlíčků (3),  
+                vypsat průměrný věk a váhu (4), 
+                hledat mazlíčka dle jména (5), 
+                hledat mazlíčka dle druhu (6)?
+            """);
             int akce = sc.nextInt();
             sc.nextLine();
             switch (akce){
